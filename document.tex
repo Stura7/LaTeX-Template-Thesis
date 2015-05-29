@@ -2,10 +2,10 @@
 \documentclass[12pt, bibliography=totoc, a4paper, abstracton, numbers=noenddot]{scrreprt}
 %compiler anweisung
 \nonstopmode
-% absatz abstand
+% Absatz - Abstand verändern (Vertikal + Horizontal)
 \parskip 12pt
 \parindent 0pt
-%Hurenkinder & Schusterjungen verbieten
+%Seitenumbruch/Absatzkontrolle (Witwe & Waisenkind)
 \clubpenalty = 10000 
 \widowpenalty = 10000 
 \displaywidowpenalty = 10000
@@ -29,7 +29,7 @@
 \makeatother
 \setcapindent{1em}
 % define used packages
-\usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
+\usepackage[left=4cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
 
 \usepackage{fixltx2e}
 \usepackage{fontspec}
@@ -122,8 +122,6 @@
 %notwenig für die Definierung von Arrays 
 \usepackage{forarray}
 
-%\setlength{\parindent}{0pt}
-%\setlength{\parskip}{3pt}
 
 % #####
 % #
@@ -226,7 +224,7 @@
 \newpage
 
 % loads the fancy pagestyle for register part
-\input{header/fancyRegisterPart}
+%\input{header/fancyRegisterPart}
 
 % #####
 % # load the bibliography
