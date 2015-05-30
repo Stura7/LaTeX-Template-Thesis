@@ -1,0 +1,26 @@
+% set the pagestyle to fancy
+\pagestyle{scrheadings}
+
+\clearscrheadfoot
+  % define the header
+  \ihead{\leftmark}% left header
+  \ohead{\HEADER}% right header
+  \setheadsepline{0.4pt}% top line
+  % define the footer
+  \ifoot{\AUTHORNAME{MM}}% left footer
+  \ofoot{\pagemark}% right footer
+  \setfootsepline{0.6pt} 
+  % redefine the chaptermark to have '1. Chaptername' and not 'CHAPTER 1.
+  % CHAPTERNAME'
+  \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+% override the plain style
+%\fancypagestyle{plain}{%
+%\fancyhf{}% clear all fields
+  % define the header
+  %\renewcommand{\headrulewidth}{0.0pt}% top line
+%
+  % define the footer
+  %\fancyfoot[L]{\AUTHORNAME{MM}\\\AUTHORNAME{NN}}% left footer
+  %\fancyfoot[R]{\pagemark}% right footer
+  %\renewcommand{\footrulewidth}{0.6pt}% bottom line
+%}

@@ -100,7 +100,10 @@
 \definecolor{middlegray}{gray}{0.7}
 
 % header and footer
-\usepackage{fancyhdr}
+
+%%\usepackage{fancyhdr}
+\usepackage{scrpage2}
+\input{header/pagestyle}
 
 % internal links
 \usepackage[colorlinks=true ,linkcolor=black,
@@ -117,7 +120,7 @@
 \input{header/lststyles}
 
 %set default pagestyle 
-\pagestyle{empty}
+%\pagestyle{empty}
 
 %veringert den abstand zwischen tichpunkten
 \usepackage{enumitem}
@@ -194,7 +197,7 @@
 \input{content/preamble}
 
 % loads the fancy pagestyle for register part
-\input{header/fancyRegisterPart}
+%%\input{header/fancyRegisterPart}
 
 % create the registers
 \tableofcontents
@@ -215,8 +218,8 @@
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
 % loads the fancy pagestyle for main part
-\input{header/fancyMainPart}
-
+%%\input{header/fancyMainPart}
+\input{header/pagestyle}
 % #####
 % # load the chapter from the files
 % #
@@ -228,7 +231,7 @@
 \newpage
 
 % loads the fancy pagestyle for register part
-\input{header/fancyRegisterPart}
+%%\input{header/fancyRegisterPart}
 
 % #####
 % # load the bibliography
@@ -236,7 +239,7 @@
 
 
 \printbibliography
-\input{header/fancyRegisterPart}
+%%\input{header/fancyRegisterPart}
 \pagenumbering{Roman}
 \setcounter{page}{\value{romanCount}}
 % #####
