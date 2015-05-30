@@ -1,5 +1,8 @@
 % define documentclass
 \documentclass[12pt, bibliography=totoc, a4paper, abstracton, numbers=noenddot]{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\inputencoding{utf8}
 %compiler anweisung
 \nonstopmode
 % Absatz - Abstand verändern (Vertikal + Horizontal)
@@ -17,31 +20,31 @@
 \makeatother
 
 %floatplatzierung
-\renewcommand{\floatpagefraction}{.6}% vorher: .5 
-\renewcommand{\textfraction}{.15} % vorher: .2 
-\renewcommand{\topfraction}{.8}     % vorher: .7 
-\renewcommand{\bottomfraction}{.5}  % vorher: .3 
-\setcounter{topnumber}{3} % vorher: 2 
-\setcounter{bottomnumber}{1} % vorher: 1 
-\setcounter{totalnumber}{5} % vorher: 3
+\renewcommand{\floatpagefraction}{.6} 
+\renewcommand{\textfraction}{.15}
+\renewcommand{\topfraction}{.8} 
+\renewcommand{\bottomfraction}{.5} 
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{1} 
+\setcounter{totalnumber}{5}
 \makeatletter
 \setlength{\@fptop}{0pt}
 \makeatother
 \setcapindent{1em}
 % define used packages
+% Seitenränder definieren
 \usepackage[left=4cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
 
 \usepackage{fixltx2e}
-\usepackage{fontspec}
 %\usepackage{xltxtra}
-\usepackage{xunicode}
+%%\usepackage{xunicode}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
 %--------------------------
 %schriftart
 \usepackage{lmodern}
 %--------------------------
-%\usepackage{listings}
+\usepackage{listings}
 
 
 %--------------------------
@@ -69,7 +72,8 @@
 \defcounter{biburlucpenalty}{6000}
 \defcounter{biburllcpenalty}{9000}
 
-\addbibresource{bibliography.bib}
+%\addbibresource{bibliography.bib}
+\bibliography{bibliography.bib}
 
 \usepackage[bottom]{footmisc} %Damit Footnotes immer als Unterstes angezeigt werden, wenn man ein Abbildung mit [b]ottom platziert
 
@@ -107,7 +111,7 @@
 \usepackage{amsmath, amssymb}
 
 % to include images side by side
-\usepackage{subfigure}
+%\usepackage{subfigure}
 
 % define the programming language
 \input{header/lststyles}
@@ -224,7 +228,7 @@
 \newpage
 
 % loads the fancy pagestyle for register part
-%\input{header/fancyRegisterPart}
+\input{header/fancyRegisterPart}
 
 % #####
 % # load the bibliography
